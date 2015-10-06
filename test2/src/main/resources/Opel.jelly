@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<jelly xmlns="jelly:core" trim="yes">
+    <set var="amortization" value="10"/>
+    <set var="repair" value="200"/>
+
+    <invokeStatic className="ru.hh.test2.Travel" method="someInnerLogic" var="innerLogic"/>
+
+    ${(amortization * 3 + repair) * innerLogic}
+</jelly>
